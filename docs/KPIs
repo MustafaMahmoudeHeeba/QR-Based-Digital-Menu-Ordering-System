@@ -12,55 +12,41 @@ The KPIs are calculated from order data stored in the Data Warehouse after the w
 Definition:
 The total number of orders placed during the selected period.
 
-Formula:
 
-Total Orders = COUNT(Order_ID)
 2.2 Total Revenue
 
 Definition:
 The total revenue generated from accepted orders during the selected period.
 
-Formula:
 
-Total Revenue = SUM(Order Total Price)
 2.3 Average Order Value (AOV)
 
 Definition:
 The average revenue generated per accepted order.
 
-Formula:
 
-AOV = Total Revenue / Number of Accepted Orders 3. Order Performance KPIs
 3.1 Accepted Orders
 
 Definition:
 The number of orders accepted by the Cashier during the selected period.
 
-Accepted Orders = COUNT(Order_ID WHERE Status = 'ACCEPTED')
 3.2 Rejected Orders
 
 Definition:
 The number of orders rejected by the Cashier during the selected period.
 
-Rejected Orders = COUNT(Order_ID WHERE Status = 'REJECTED')
 3.3 Acceptance Rate
 
 Definition:
 The percentage of submitted orders that were accepted by the Cashier.
 
-Formula:
 
-Acceptance Rate =
-(Accepted Orders / Total Orders) × 100
 3.4 Rejection Rate
 
 Definition:
 The percentage of submitted orders that were rejected by the Cashier.
 
-Formula:
 
-Rejection Rate =
-(Rejected Orders / Total Orders) × 100 4. Product & Category Analytics
 4.1 Top-Selling Products
 
 Shows the products with the highest number of units sold during the selected period.
