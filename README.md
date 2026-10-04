@@ -6,7 +6,9 @@ QR-Based-Digital-Menu-Ordering-System/
 ├── qr-menu-backend/
 │   │
 │   ├── app/
-│   │   ├── __pycache__/
+│   │   ├── __init__.py
+│   │   ├── main.py        
+│   │   │
 │   │   ├── core/
 │   │   ├── database/
 │   │   ├── models/
@@ -14,10 +16,8 @@ QR-Based-Digital-Menu-Ordering-System/
 │   │   ├── schemas/
 │   │   ├── services/
 │   │   ├── tests/
-│   │   ├── venv/
 │   │   └── websocket/
 │   │
-│   ├── main.py
 │   ├── .env
 │   ├── .gitignore
 │   ├── alembic.ini
