@@ -1,6 +1,7 @@
 from datetime import datetime
 
 from sqlalchemy import Column, Integer, Float, DateTime, ForeignKey, Enum
+from sqlalchemy.orm import relationship
 
 from app.database.base import Base
 from app.models.enums import OrderStatus
@@ -35,4 +36,9 @@ class Order(Base):
         Integer,
         ForeignKey("tables.id"),
         nullable=False
+    )
+
+    restaurant = relationship(
+        "Restaurant",
+        back_populates="orders"
     )
