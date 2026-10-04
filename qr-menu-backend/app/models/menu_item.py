@@ -26,6 +26,6 @@ class MenuItem(Base):
     )
 
     order_items = relationship(
-    "OrderItem",
-    back_populates="menu_item"
+        "OrderItem",
+        back_populates="menu_item"
     )
