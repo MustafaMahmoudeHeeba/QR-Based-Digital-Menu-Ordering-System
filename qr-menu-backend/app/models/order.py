@@ -47,3 +47,7 @@ class Order(Base):
         "Table",
         back_populates="orders"
     )
+    order_items = relationship(
+    "OrderItem",
+    back_populates="order"
+)
