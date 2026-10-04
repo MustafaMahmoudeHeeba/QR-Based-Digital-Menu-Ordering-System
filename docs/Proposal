@@ -1,0 +1,117 @@
+QR-Based Digital Menu & Ordering System
+
+Table of Contents :
+Project Overview
+Project Objectives
+Project Scope
+3.1 Customer Scope
+3.2 Cashier Scope
+3.3 Admin Scope
+3.4 Data & Analytics Scope
+
+1. Project Overview
+
+The QR-Based Digital Menu & Ordering System is a web-based platform designed to simplify the ordering process inside cafés and restaurants.
+
+Instead of relying on physical menus and manually communicating orders to the cashier, customers can scan a single QR code available in the restaurant, select their table number, browse the digital menu, choose multiple products, and submit their order directly to the cashier system.
+
+The system consists of three main actors:
+
+Customer: Browses the menu, selects products, enters the table number, optionally provides their name, and submits an order.
+Cashier: Monitors incoming orders, reviews their availability, and accepts or rejects orders.
+Admin: Manages menu categories and products, including their prices and availability, and monitors sales and operational KPIs through a dashboard.
+
+Orders are initially stored in a relational operational database. At the end of each week, the collected operational data is transferred to a Data Warehouse to support historical analysis and reporting.
+
+The Admin can access a dashboard containing KPIs and analytical insights for a selected period, such as weekly or previous-period sales and order performance.
+
+2. Project Objectives
+
+The main objectives of the project are:
+
+2.1 Improve Customer Ordering
+Provide customers with a simple digital menu accessible through a QR code.
+Allow customers to order multiple products without requiring an account or application installation.
+2.2 Improve Order Management
+Allow cashiers to receive incoming orders directly through the system.
+Allow cashiers to accept or reject orders based on product availability and operational conditions.
+2.3 Reduce Ordering Errors
+Digitize the ordering process and reduce errors caused by manual order entry or verbal communication.
+2.4 Centralize Menu Management
+Allow the Admin to create, update, and delete product categories and menu items.
+Allow the Admin to define product prices and availability.
+2.5 Enable Data-Driven Analysis
+Store operational order data in a relational database.
+Transfer historical data to a Data Warehouse on a weekly basis.
+Provide the Admin with KPIs and analytical dashboards based on historical and operational data.
+
+3. Project Scope
+
+3.1 Customer Scope
+
+The system will allow customers to:
+
+Access the digital menu by scanning the restaurant QR code.
+Enter or select their table number.
+Browse available product categories and products.
+View product names, descriptions, and prices.
+Select multiple products and specify quantities.
+Review the order and total price.
+Optionally provide their name.
+Submit the order to the cashier.
+3.2 Cashier Scope
+
+The system will allow the Cashier to:
+
+Access a secured order management interface.
+View incoming orders with their table numbers, products, quantities, and prices.
+Review the availability of requested products.
+Accept valid orders.
+Reject orders when one or more requested products are unavailable or the order cannot be fulfilled.
+Update the order status after handling the order.
+
+If a customer submits an order containing a product that is no longer available, the system will allow the Cashier to reject the pending order. The order will then be marked as REJECTED instead of being confirmed.
+
+3.3 Admin Scope
+
+The system will allow the Admin to:
+
+Create, update, and delete product categories.
+Create, update, and delete products.
+Set product prices.
+Manage product availability.
+Monitor orders and sales-related KPIs.
+View analytical dashboards for selected periods.
+Access historical sales and operational reports generated from the Data Warehouse.
+3.4 Data & Analytics Scope
+
+The system will use two main data layers:
+
+Operational Database
+
+The relational operational database will store current system transactions and operational data, including:
+
+Orders
+Order Items
+Products
+Categories
+Tables
+Order statuses
+Product prices
+Customer names when provided
+Data Warehouse
+
+Historical operational data will be transferred to the Data Warehouse at the end of each week.
+
+The Data Warehouse will support analytical queries and dashboards covering metrics such as:
+
+Total Orders
+Total Revenue
+Average Order Value
+Accepted Orders
+Rejected Orders
+Order Trends
+Top-selling Products
+Popular Categories
+
+The Admin will be able to use these analytical insights to monitor the restaurant's sales and operational performance over a selected period.
