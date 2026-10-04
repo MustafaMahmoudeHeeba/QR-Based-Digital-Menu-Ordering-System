@@ -24,3 +24,8 @@ class MenuItem(Base):
         "Category",
         back_populates="menu_items"
     )
+
+    order_items = relationship(
+    "OrderItem",
+    back_populates="menu_item"
+    )
