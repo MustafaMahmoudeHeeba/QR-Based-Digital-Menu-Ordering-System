@@ -42,3 +42,8 @@ class Order(Base):
         "Restaurant",
         back_populates="orders"
     )
+
+    table = relationship(
+        "Table",
+        back_populates="orders"
+    )
