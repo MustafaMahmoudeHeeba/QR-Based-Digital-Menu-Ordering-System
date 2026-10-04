@@ -20,3 +20,8 @@ class Category(Base):
         "Restaurant",
         back_populates="categories"
     )
+
+    menu_items = relationship(
+        "MenuItem",
+        back_populates="category"
+    )

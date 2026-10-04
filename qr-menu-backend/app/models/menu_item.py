@@ -1,4 +1,5 @@
 from sqlalchemy import Column, Integer, String, Float, Boolean, ForeignKey
+from sqlalchemy.orm import relationship
 
 from app.database.base import Base
 
@@ -17,4 +18,9 @@ class MenuItem(Base):
         Integer,
         ForeignKey("categories.id"),
         nullable=False
+    )
+
+    category = relationship(
+        "Category",
+        back_populates="menu_items"
     )
