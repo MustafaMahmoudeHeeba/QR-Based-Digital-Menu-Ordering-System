@@ -1,4 +1,5 @@
 from sqlalchemy import Column, Integer, Boolean, ForeignKey
+from sqlalchemy.orm import relationship
 
 from app.database.base import Base
 
@@ -14,4 +15,9 @@ class Table(Base):
         Integer,
         ForeignKey("restaurants.id"),
         nullable=False
+    )
+
+    restaurant = relationship(
+        "Restaurant",
+        back_populates="tables"
     )
