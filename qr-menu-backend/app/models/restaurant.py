@@ -15,3 +15,8 @@ class Restaurant(Base):
         "Table",
         back_populates="restaurant"
     )
+
+    categories = relationship(
+        "Category",
+        back_populates="restaurant"
+    )
